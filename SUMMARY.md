@@ -13,7 +13,7 @@
 
 * [📐 Threat Modelling](security-architecture/threat-modelling/README.md)
   * [🛠 Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
-  * [Threat Modelling Frameworks](security-architecture/threat-modelling/threat-modelling-frameworks.md)
+  * [📘 Threat Modelling Frameworks](security-architecture/threat-modelling/threat-modelling-frameworks.md)
 
 ## Vulnerability Scanning
 
