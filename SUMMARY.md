@@ -22,3 +22,5 @@
   * [🛠 SAST Tools](vulnerability-scanning/sast/sast-tools.md)
 * [🔎 IAST](vulnerability-scanning/iast/README.md)
   * [🛠 IAST Tools](vulnerability-scanning/iast/iast-tools.md)
+* [🔎 SCA](vulnerability-scanning/sca/README.md)
+  * [🛠 SCA Tools](vulnerability-scanning/sca/sca-tools.md)
