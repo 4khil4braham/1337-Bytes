@@ -20,3 +20,5 @@
   * [🛠 DAST Tools](vulnerability-scanning/dast/dast-tools.md)
 * [🔎 SAST](vulnerability-scanning/sast/README.md)
   * [🛠 SAST Tools](vulnerability-scanning/sast/sast-tools.md)
+* [🔎 IAST](vulnerability-scanning/iast/README.md)
+  * [🛠 IAST Tools](vulnerability-scanning/iast/iast-tools.md)
