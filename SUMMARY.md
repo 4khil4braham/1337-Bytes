@@ -15,6 +15,12 @@
   * [🛠 Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
   * [📘 Threat Modelling Frameworks](security-architecture/threat-modelling/threat-modelling-frameworks.md)
 
+## Vulnerability Assessment
+
+* [🕸 Web Vulnerability Assessment](vulnerability-assessment/web-vulnerability-assessment/README.md)
+  * [🔓 Authorization Protocols](vulnerability-assessment/web-vulnerability-assessment/authorization-protocols.md)
+  * [🔓 Authentication Protocol](vulnerability-assessment/web-vulnerability-assessment/authentication-protocol.md)
+
 ## Vulnerability Scanning
 
 * [🔎 DAST](vulnerability-scanning/dast/README.md)
