@@ -12,4 +12,8 @@
 ## Security Architecture
 
 * [📐 Threat Modelling](security-architecture/threat-modelling/README.md)
-  * [Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
+  * [🛠 Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
+
+## Vulnerability Scanning
+
+* [🔎 DAST](vulnerability-scanning/dast.md)
