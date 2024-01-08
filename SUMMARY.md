@@ -16,4 +16,5 @@
 
 ## Vulnerability Scanning
 
-* [🔎 DAST](vulnerability-scanning/dast.md)
+* [🔎 DAST](vulnerability-scanning/dast/README.md)
+  * [🛠 DAST Tools](vulnerability-scanning/dast/dast-tools.md)
