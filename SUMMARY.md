@@ -18,3 +18,5 @@
 
 * [🔎 DAST](vulnerability-scanning/dast/README.md)
   * [🛠 DAST Tools](vulnerability-scanning/dast/dast-tools.md)
+* [🔎 SAST](vulnerability-scanning/sast/README.md)
+  * [🛠 SAST Tools](vulnerability-scanning/sast/sast-tools.md)
