@@ -2,16 +2,16 @@
 
 ## Enhanced Overview of Threat Modeling
 
-Threat Modeling is a systematic and structured technique within cybersecurity, focusing on identifying security objectives, threats, and vulnerabilities in applications. This approach aids in making informed design and engineering decisions, ensuring the prioritization of efforts in designing, developing, and deploying secure applications.
+Threat Modeling is a systematic and structured technique within cybersecurity, focusing on identifying security objectives, threats, and vulnerabilities in applications. This approach aids in making informed design and engineering decisions and prioritizing efforts in designing, developing, and deploying secure applications.
 
 ### Challenges in Threat Modeling
 
-1. **Integration with a Mature Software Development Life Cycle (SDLC)**: Threat modeling requires integration with a well-established SDLC to be effective.
+1. **Integration with a Mature Software Development Life Cycle (SDLC)**: Threat modeling requires effective integration with a well-established SDLC.
 2. **Time-Intensive Process**: The methodology involves a detailed and thorough analysis, making it time-consuming.
 3. **Difficulty in Demonstrating Return on Investment (ROI)**: Quantifying the financial benefits of threat modeling can be challenging.
-4. **Perceived Monotony**: The process can be viewed as somewhat tedious and less engaging.
+4. **Perceived Monotony**: The process can be somewhat tedious and less engaging.
 
-### Key Requirements for Effective Threat Modeling
+### Critical Requirements for Effective Threat Modeling
 
 1. **Mature SDLC Integration**:
    * **Requirement Gathering Phase**: Establishing a robust mechanism for gathering requirements.
@@ -21,7 +21,7 @@ Threat Modeling is a systematic and structured technique within cybersecurity, f
    * **Classification as a Security Measure**: Using classification to determine the extent of control and security needed for the data.
    * **Business Asset Value Indication**: The classification reflects the data's value as a business asset.
    * **Determining Confidentiality, Integrity, and Availability**:
-     * Confidentiality levels such as Public, Confidential, or Restricted.
-     * Integrity levels categorized as Low, Medium, or High.
+     * Confidentiality levels are such as public, confidential, or restricted.
+     * Integrity levels are categorized as Low, Medium, or High.
      * Availability classifications like Support, Essential, or Critical.
 3. **Understanding of Web Application Security Mechanisms**: Gaining knowledge about various security mechanisms specific to web applications.
