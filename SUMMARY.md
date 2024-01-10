@@ -7,7 +7,9 @@
 ## 🔴 Red Team
 
 * [🚪 Initial Access](red-team/initial-access/README.md)
-  * [Attacking Exchange Servers](red-team/initial-access/attacking-exchange-servers.md)
+  * [🟥 T1190 - Exploit Public-Facing Application](red-team/initial-access/t1190-exploit-public-facing-application/README.md)
+    * [🔺 Attacking OWA (Outlook Web Access) services](red-team/initial-access/t1190-exploit-public-facing-application/attacking-owa-outlook-web-access-services.md)
+    * [🔺 Attacking Exchange Server](red-team/initial-access/t1190-exploit-public-facing-application/attacking-exchange-server.md)
 
 ## Security Architecture
 
