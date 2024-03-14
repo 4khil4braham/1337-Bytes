@@ -32,9 +32,9 @@
 ## Penetration Testing
 
 * [🕸️ Web Application](penetration-testing/web-application/README.md)
-  * [🔓 Authorization Protocols](penetration-testing/web-application/authorization-protocols.md)
-    * [🟧 SAML](penetration-testing/web-application/authorization-protocols/saml.md)
-  * [🔓 Authentication Protocol](penetration-testing/web-application/authentication-protocol.md)
+  * [🔓 Authentication and Authorization](penetration-testing/web-application/authentication-and-authorization/README.md)
+    * [🟧 OAuth](penetration-testing/web-application/authentication-and-authorization/oauth.md)
+    * [🟧 SAML](penetration-testing/web-application/authentication-and-authorization/saml.md)
 * [📦 Virtualization](penetration-testing/virtualization/README.md)
   * [☸️ Kubernetes](penetration-testing/virtualization/kubernetes/README.md)
     * [🗒️ Kubernetes Security Checklist](penetration-testing/virtualization/kubernetes/kubernetes-security-checklist.md)
