@@ -2,7 +2,7 @@
 
 ## 🎉 Welcome
 
-* [🖥 1337 Bytes](README.md)
+* [🖥️ 1337 Bytes](README.md)
 
 ## 🔴 Red Team
 
@@ -14,22 +14,22 @@
 ## Security Architecture
 
 * [📐 Threat Modelling](security-architecture/threat-modelling/README.md)
-  * [🛠 Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
+  * [🛠️ Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
   * [📘 Threat Modelling Frameworks](security-architecture/threat-modelling/threat-modelling-frameworks.md)
 
 ## Vulnerability Assessment
 
-* [🕸 Web Vulnerability Assessment](vulnerability-assessment/web-vulnerability-assessment/README.md)
+* [🕸️ Web Vulnerability Assessment](vulnerability-assessment/web-vulnerability-assessment/README.md)
   * [🔓 Authorization Protocols](vulnerability-assessment/web-vulnerability-assessment/authorization-protocols.md)
   * [🔓 Authentication Protocol](vulnerability-assessment/web-vulnerability-assessment/authentication-protocol.md)
 
 ## Vulnerability Scanning
 
 * [🔎 DAST](vulnerability-scanning/dast/README.md)
-  * [🛠 DAST Tools](vulnerability-scanning/dast/dast-tools.md)
+  * [🛠️ DAST Tools](vulnerability-scanning/dast/dast-tools.md)
 * [🔎 SAST](vulnerability-scanning/sast/README.md)
-  * [🛠 SAST Tools](vulnerability-scanning/sast/sast-tools.md)
+  * [🛠️ SAST Tools](vulnerability-scanning/sast/sast-tools.md)
 * [🔎 IAST](vulnerability-scanning/iast/README.md)
-  * [🛠 IAST Tools](vulnerability-scanning/iast/iast-tools.md)
+  * [🛠️ IAST Tools](vulnerability-scanning/iast/iast-tools.md)
 * [🔎 SCA](vulnerability-scanning/sca/README.md)
-  * [🛠 SCA Tools](vulnerability-scanning/sca/sca-tools.md)
+  * [🛠️ SCA Tools](vulnerability-scanning/sca/sca-tools.md)
