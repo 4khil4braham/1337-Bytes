@@ -35,6 +35,7 @@
   * [🔓 Authentication and Authorization](penetration-testing/web-application/authentication-and-authorization/README.md)
     * [🟧 OAuth](penetration-testing/web-application/authentication-and-authorization/oauth.md)
     * [🟧 SAML](penetration-testing/web-application/authentication-and-authorization/saml.md)
+    * [🟧 OpenID Connect](penetration-testing/web-application/authentication-and-authorization/openid-connect.md)
 * [📦 Virtualization](penetration-testing/virtualization/README.md)
   * [☸️ Kubernetes](penetration-testing/virtualization/kubernetes/README.md)
     * [🗒️ Kubernetes Security Checklist](penetration-testing/virtualization/kubernetes/kubernetes-security-checklist.md)
