@@ -17,12 +17,6 @@
   * [🛠️ Threat Modelling Tools](security-architecture/threat-modelling/threat-modelling-tools.md)
   * [📘 Threat Modelling Frameworks](security-architecture/threat-modelling/threat-modelling-frameworks.md)
 
-## Vulnerability Assessment
-
-* [🕸️ Web Application Security](vulnerability-assessment/web-application-security/README.md)
-  * [🔓 Authorization Protocols](vulnerability-assessment/web-application-security/authorization-protocols.md)
-  * [🔓 Authentication Protocol](vulnerability-assessment/web-application-security/authentication-protocol.md)
-
 ## Vulnerability Scanning
 
 * [🔎 DAST](vulnerability-scanning/dast/README.md)
@@ -33,3 +27,12 @@
   * [🛠️ IAST Tools](vulnerability-scanning/iast/iast-tools.md)
 * [🔎 SCA](vulnerability-scanning/sca/README.md)
   * [🛠️ SCA Tools](vulnerability-scanning/sca/sca-tools.md)
+
+## Penetration Testing
+
+* [🕸️ Web Application](penetration-testing/web-application/README.md)
+  * [🔓 Authorization Protocols](penetration-testing/web-application/authorization-protocols.md)
+  * [🔓 Authentication Protocol](penetration-testing/web-application/authentication-protocol.md)
+* [📦 Virtualization](penetration-testing/virtualization/README.md)
+  * [☸️ Kubernetes](penetration-testing/virtualization/kubernetes/README.md)
+    * [🗒️ Kubernetes Security Checklist](penetration-testing/virtualization/kubernetes/kubernetes-security-checklist.md)
