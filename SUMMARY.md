@@ -10,6 +10,7 @@
   * [🟥 T1190 - Exploit Public-Facing Application](red-team/initial-access/t1190-exploit-public-facing-application/README.md)
     * [🔺 Attacking OWA (Outlook Web Access) services](red-team/initial-access/t1190-exploit-public-facing-application/attacking-owa-outlook-web-access-services.md)
     * [🔺 Attacking Exchange Server](red-team/initial-access/t1190-exploit-public-facing-application/attacking-exchange-server.md)
+  * [🟥 Phishing](red-team/initial-access/phishing.md)
 
 ## Security Architecture
 
@@ -31,7 +32,8 @@
 ## Penetration Testing
 
 * [🕸️ Web Application](penetration-testing/web-application/README.md)
-  * [🔓 Authorization Protocols](penetration-testing/web-application/authorization-protocols.md)
+  * [🔓 Authorization Protocols](penetration-testing/web-application/authorization-protocols/README.md)
+    * [🟧 SAML](penetration-testing/web-application/authorization-protocols/saml.md)
   * [🔓 Authentication Protocol](penetration-testing/web-application/authentication-protocol.md)
 * [📦 Virtualization](penetration-testing/virtualization/README.md)
   * [☸️ Kubernetes](penetration-testing/virtualization/kubernetes/README.md)
