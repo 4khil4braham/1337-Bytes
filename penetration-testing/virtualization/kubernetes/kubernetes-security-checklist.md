@@ -10,6 +10,14 @@ kubectl version --short
 
 Cross-reference the obtained version information with the [CVE ](https://cve.mitre.org/)database to identify any vulnerabilities specific to your Kubernetes version.
 
+* [ ] **Check for Expired Certificates:**&#x20;
+
+Kubernetes clusters use certificates for various components and services. Expired certificates can lead to service outages and vulnerabilities. Use `openssl` to check the expiration of a certificate:
+
+```bash
+openssl x509 -noout -dates -in /etc/kubernetes/pki/apiserver.crt
+```
+
 ## Cluster Configuration and Management
 
 * [ ] **Audit RBAC policies:**&#x20;
@@ -24,14 +32,37 @@ Use tools like `rbac-tool` or `kubectl get roles,clusterroles,rolebindings,clust
 </strong>audit2rbac --filename audit.log
 </code></pre>
 
+* [ ] **Analyze API Server Auditing Settings:**&#x20;
+
+Auditing settings are crucial for tracking unauthorized access attempts and changes within the cluster. Check the audit policy file (`audit-policy.yaml`) used by the API server to ensure it's logging at the desired level (e.g., `RequestResponse` for all requests and responses).
+
+```yaml
+yamlCopy code# Example audit-policy.yaml snippet
+apiVersion: audit.k8s.io/v1
+kind: Policy
+rules:
+  - level: RequestResponse
+    resources:
+    - group: ""
+      resources: ["pods"]  
+```
+
 ## Node and Pod Security
 
-* [ ] **Check for containers running as root:**&#x20;
+* [ ] **Check for containers running as `root`:**&#x20;
 
 Identify pods running as root, which can be a major security risk, using a command like:
 
 ```bash
 kubectl get pods -o jsonpath='{.items[?(@.spec.containers[*].securityContext.runAsUser==0)].metadata.name}'
+```
+
+* [ ] **Check for `AllowPrivilegeEscalation`:**&#x20;
+
+Preventing privilege escalation within containers is critical. Use the following command to find pods allowing privilege escalation:
+
+```bash
+kubectl get pods -A -o json | jq '.items[] | select(.spec.containers[].securityContext.allowPrivilegeEscalation == true) | .metadata.name'
 ```
 
 ## Authentication and Authorization
@@ -59,6 +90,14 @@ trivy image <your_image_name>
 
 Trivy is a comprehensive vulnerability scanner for container images, filesystems, and packages. It can help identify known vulnerabilities in the container images used in your cluster.
 
+* [ ] **Use Kube-bench for CIS Benchmark Tests:**&#x20;
+
+`kube-bench` runs checks against Kubernetes clusters to ensure they are deployed securely by checking against the CIS Kubernetes Benchmark.
+
+```bash
+kube-bench run
+```
+
 ## Network Exposure and Services
 
 * [ ] **Enumerate exposed services:**&#x20;
@@ -67,6 +106,14 @@ Kube-hunter is an open-source tool designed to hunt for security weaknesses in K
 
 ```bash
 kube-hunter --remote <your_cluster_API_endpoint>
+```
+
+* [ ] **Inspect Ingress Objects for TLS Configuration:**
+
+&#x20;Ensuring that Ingress objects are correctly configured with TLS can prevent traffic interception. List all Ingress objects and review their TLS settings:
+
+```bash
+bashCopy codekubectl get ingress -A -o yaml | less
 ```
 
 ## Storage Security
@@ -81,13 +128,17 @@ kubectl get pv -o yaml
 
 * [ ] Review `accessmodes`
 
-Review the access modes of PVCs to ensure they are not overly permissive:
-
 ```bash
 kubectl pvc --all-namespaces -o=jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.spec.accessModes}{"\n"}{end}'
 ```
 
-## `Etcd` Security
+* [ ] **Review StorageClass for Default Encryption:**&#x20;
+
+```bash
+kubectl get storageclass -o yaml
+```
+
+## `etcd` security
 
 * [ ] **Ensure `etcd`encryption:**&#x20;
 
@@ -105,6 +156,14 @@ spec:
     ...
     - --encryption-provider-config=/etc/kubernetes/pki/encryption-config.yaml
 
+```
+
+* [ ] **Check for Etcd Access Controls:**&#x20;
+
+Direct access to `etcd` is a significant risk. Ensure that access is restricted and encrypted. If you have access, you can check the `etcd` member list to understand its configuration:
+
+```bash
+ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/path/to/ca.pem --cert=/path
 ```
 
 ## CI/CD and DevOps Practices
