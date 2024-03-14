@@ -2,9 +2,13 @@
 
 ## Pre-Assessment
 
-* [ ] **Gather Kubernetes version:**&#x20;
+* [ ] **Gather Kubernetes version details:**
 
-Use `kubectl version` to check the running version of Kubernetes and then reference the [CVE ](https://cve.mitre.org/)(Common Vulnerabilities and Exposures) database to identify any known vulnerabilities associated with that version.
+```bash
+kubectl version --short
+```
+
+Cross-reference the obtained version information with the [CVE ](https://cve.mitre.org/)database to identify any vulnerabilities specific to your Kubernetes version.
 
 ## Cluster Configuration and Management
 
@@ -12,11 +16,23 @@ Use `kubectl version` to check the running version of Kubernetes and then refere
 
 Use tools like `rbac-tool` or `kubectl get roles,clusterroles,rolebindings,clusterrolebindings --all-namespaces` to dump and analyze RBAC settings for overly permissive configurations.
 
+* [ ] **Audit RBAC policies using `audit2rbac`:**&#x20;
+
+`audit2rbac` is a tool that can create RBAC policies based on Kubernetes audit logs, providing insight into what permissions are being used. This can highlight overly permissive or unused roles and bindings:
+
+<pre class="language-bash"><code class="lang-bash"><strong>kubectl logs kube-apiserver-&#x3C;pod_name> -n kube-system > audit.log
+</strong>audit2rbac --filename audit.log
+</code></pre>
+
 ## Node and Pod Security
 
-* [ ] **Inspect security contexts:**&#x20;
+* [ ] **Check for containers running as root:**&#x20;
 
-Use a command like `kubectl get pods --all-namespaces -o=jsonpath='{.items[?(@.spec.securityContext.privileged==true)].metadata.name}'` to find pods running with privileged security contexts, which could be a security risk.
+Identify pods running as root, which can be a major security risk, using a command like:
+
+```bash
+kubectl get pods -o jsonpath='{.items[?(@.spec.containers[*].securityContext.runAsUser
+```
 
 ## Authentication and Authorization
 
@@ -24,11 +40,24 @@ Use a command like `kubectl get pods --all-namespaces -o=jsonpath='{.items[?(@.s
 
 Check for service accounts with unnecessary permissions by inspecting their linked roles and cluster roles using `kubectl get serviceaccounts -o yaml` and then analyzing their permissions.
 
+* [ ] **Test Service Account token access:**&#x20;
+
+You can attempt to use a service account's token to access the Kubernetes API and test what level of access is granted. This requires accessing a pod and using the mounted service account token found at `/var/run/secrets/kubernetes.io/serviceaccount/token`:
+
+```bash
+TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
+curl --insecure --header "Authorization: Bearer $TOKEN" https://kubernetes.default.sv
+```
+
 ## Workload Security
 
 * [ ] **Review deployed applications for common vulnerabilities:**&#x20;
 
-Use a vulnerability scanner such as `Trivy` against container images to identify known vulnerabilities in the applications deployed within the cluster
+```bash
+trivy image <your_image_name>
+```
+
+Trivy is a comprehensive vulnerability scanner for container images, filesystems, and packages. It can help identify known vulnerabilities in the container images used in your cluster.
 
 ## Network Exposure and Services
 
