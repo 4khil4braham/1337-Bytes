@@ -32,7 +32,7 @@
 ## Penetration Testing
 
 * [🕸️ Web Application](penetration-testing/web-application/README.md)
-  * [🔓 Authorization Protocols](penetration-testing/web-application/authorization-protocols/README.md)
+  * [🔓 Authorization Protocols](penetration-testing/web-application/authorization-protocols.md)
     * [🟧 SAML](penetration-testing/web-application/authorization-protocols/saml.md)
   * [🔓 Authentication Protocol](penetration-testing/web-application/authentication-protocol.md)
 * [📦 Virtualization](penetration-testing/virtualization/README.md)
