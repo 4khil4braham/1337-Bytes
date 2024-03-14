@@ -14,7 +14,7 @@
 
 ## ☁️ Cloud Security
 
-* [AWS](cloud-security/aws.md)
+* [🟠 AWS](cloud-security/aws.md)
 
 ## 📦 Container Security
 
