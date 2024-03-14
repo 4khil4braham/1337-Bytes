@@ -32,6 +32,8 @@ Use tools like `rbac-tool` or `kubectl get roles,clusterroles,rolebindings,clust
 </strong>audit2rbac --filename audit.log
 </code></pre>
 
+## Kubernetes API Server
+
 * [ ] **Analyze API Server Auditing Settings:**&#x20;
 
 Auditing settings are crucial for tracking unauthorized access attempts and changes within the cluster. Check the audit policy file (`audit-policy.yaml`) used by the API server to ensure it's logging at the desired level (e.g., `RequestResponse` for all requests and responses).
@@ -46,6 +48,14 @@ rules:
     - group: ""
       resources: ["pods"]  
 ```
+
+* [ ] **Check if the API server allows anonymous access:**
+
+```bash
+curl https://<api-server-ip>:<port>/api --header "Authorization: Bearer wrong"
+```
+
+If you get a successful response rather than a `401 Unauthorized`, anonymous access is enabled.
 
 ## Node and Pod Security
 
@@ -166,6 +176,16 @@ Direct access to `etcd` is a significant risk. Ensure that access is restricted 
 ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/path/to/ca.pem --cert=/path
 ```
 
+* #### Etcd Exposed to the Internet
+
+An exposed etcd server can be a gold mine for attackers, providing access to all state and secrets managed by Kubernetes.
+
+Scan for open etcd ports using nmap or similar tools:
+
+```bash
+nmap -p 2379,2380 <cluster-IP-range>
+```
+
 ## CI/CD and DevOps Practices
 
 * [ ] **Assess the CI/CD pipeline security:**&#x20;
@@ -188,7 +208,7 @@ bashCopy codecheckov -d /path/to/terraform/code
 
 * [ ] **Verify logging configurations:**&#x20;
 
-Ensure that audit logging is enabled and properly configured on the Kubernetes API server with `--audit-log-path` and `--audit-policy-file` flags, which specify the log file path and the audit policy file, respectively.
+Ensure that audit logging is enabled and properly configured on the Kubernetes API server with `--audit-log-path` and `--audit-policy-file` flags specify the log file path and the audit policy file, respectively.
 
 This can also be done using the following command
 
