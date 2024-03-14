@@ -113,7 +113,7 @@ kube-hunter --remote <your_cluster_API_endpoint>
 &#x20;Ensuring that Ingress objects are correctly configured with TLS can prevent traffic interception. List all Ingress objects and review their TLS settings:
 
 ```bash
-bashCopy codekubectl get ingress -A -o yaml | less
+kubectl get ingress -A -o yaml | less
 ```
 
 ## Storage Security
@@ -176,13 +176,21 @@ Review the pipeline configurations for exposed secrets or lack of security steps
 
 Manually review configuration files or use automated tools to detect hard-coded secrets. GitHub's secret scanning feature or tools like `truffleHog` can be utilized to search through the repository history for exposed secrets.
 
+* [ ] **Static Analysis of Infrastructure as Code (IaC):**&#x20;
+
+Tools like `checkov` or `terraform-compliance` can be used to perform static analysis on IaC (e.g., Terraform, CloudFormation) to identify misconfigurations.
+
+```bash
+bashCopy codecheckov -d /path/to/terraform/code
+```
+
 ## Logging and Monitoring
 
 * [ ] **Verify logging configurations:**&#x20;
 
 Ensure that audit logging is enabled and properly configured on the Kubernetes API server with `--audit-log-path` and `--audit-policy-file` flags, which specify the log file path and the audit policy file, respectively.
 
-Can also be done use the following command
+This can also be done using the following command
 
 ```
 ps aux | grep kube-apiserver | grep audit-log-path
