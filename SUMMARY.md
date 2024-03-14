@@ -19,9 +19,9 @@
 
 ## Vulnerability Assessment
 
-* [🕸️ Web Vulnerability Assessment](vulnerability-assessment/web-vulnerability-assessment/README.md)
-  * [🔓 Authorization Protocols](vulnerability-assessment/web-vulnerability-assessment/authorization-protocols.md)
-  * [🔓 Authentication Protocol](vulnerability-assessment/web-vulnerability-assessment/authentication-protocol.md)
+* [🕸️ Web Application Security](vulnerability-assessment/web-application-security/README.md)
+  * [🔓 Authorization Protocols](vulnerability-assessment/web-application-security/authorization-protocols.md)
+  * [🔓 Authentication Protocol](vulnerability-assessment/web-application-security/authentication-protocol.md)
 
 ## Vulnerability Scanning
 
