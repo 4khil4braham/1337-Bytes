@@ -2,7 +2,7 @@
 
 ## 🎉 Welcome
 
-* [🖥️ 1337 Bytes](README.md)
+* [🖥️ 1337 KB](README.md)
 
 ## 🔴 Red Team
 

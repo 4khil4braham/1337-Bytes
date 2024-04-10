@@ -1,4 +1,4 @@
-# 🖥️ 1337 Bytes
+# 🖥️ 1337 KB
 
 ***
 
@@ -14,20 +14,16 @@ The digital landscape is filled with both opportunities and threats. While the i
 
 🛡️ **What You'll Find Here**
 
-My blog covers a wide range of topics related to cybersecurity, privacy, and security engineering.
+My research covers a wide range of topics related to cybersecurity, privacy, and security engineering.
 
 
 
 👥 `whoami`
 
-Passionate cybersecurity expert and enthusiast.
-
-
-
-Thank you for choosing 1337 Bytes as your trusted source for security.&#x20;
+Passionate cybersecurity enthusiast.
 
 
 
 Stay safe and secure online!
 
-\-Akhil, 1337 Bytes.
+\-Akhil, 1337 KB
