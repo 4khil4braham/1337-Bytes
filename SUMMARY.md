@@ -27,15 +27,18 @@
   * [Linux File System](operating-system-security/linux/linux-file-system/README.md)
     * [🟦 Sensitive Files](operating-system-security/linux/linux-file-system/sensitive-files.md)
 
+## 🔐 IAM Security
+
+* [🔓 Authentication and Authorization](iam-security/authentication-and-authorization/README.md)
+  * [🟧 OAuth](iam-security/authentication-and-authorization/oauth.md)
+  * [🟧 SAML](iam-security/authentication-and-authorization/saml.md)
+  * [🟧 OpenID Connect](iam-security/authentication-and-authorization/openid-connect.md)
+  * [🟧 Basic Auth](iam-security/authentication-and-authorization/basic-auth.md)
+  * [🟧 JWT](iam-security/authentication-and-authorization/jwt.md)
+
 ## 🌐 Web Application Security
 
 * [🕸️ Web Application](web-application-security/web-application/README.md)
-  * [🔓 Authentication and Authorization](web-application-security/web-application/authentication-and-authorization/README.md)
-    * [🟧 OAuth](web-application-security/web-application/authentication-and-authorization/oauth.md)
-    * [🟧 SAML](web-application-security/web-application/authentication-and-authorization/saml.md)
-    * [🟧 OpenID Connect](web-application-security/web-application/authentication-and-authorization/openid-connect.md)
-    * [🟧 Basic Auth](web-application-security/web-application/authentication-and-authorization/basic-auth.md)
-    * [🟧 JWT](web-application-security/web-application/authentication-and-authorization/jwt.md)
   * [📑 Web Application Vulnerabilities](web-application-security/web-application/web-application-vulnerabilities/README.md)
     * [🟨 CSRF - Cross-Site Request Forgery](web-application-security/web-application/web-application-vulnerabilities/csrf-cross-site-request-forgery.md)
     * [🟨 XSS - Cross-Site Scripting](web-application-security/web-application/web-application-vulnerabilities/xss-cross-site-scripting.md)

@@ -2,19 +2,19 @@
 
 ***
 
-**Welcome to 1337 Bytes**
+**Welcome to 1337 KB**
 
 
 
 🌐 **Why Security Matters**
 
-The digital landscape is filled with both opportunities and threats. While the internet offers unparalleled convenience and endless possibilities, it also exposes us to cybercriminals, data breaches, and online vulnerabilities. My mission is to empower you with knowledge, tools, and strategies to stay one step ahead of potential risks.
+The digital landscape is filled with both opportunities and threats. While the internet offers unparalleled convenience and endless possibilities, it exposes us to cybercriminals, data breaches, and online vulnerabilities. My mission is to empower you with knowledge, tools, and strategies to stay one step ahead of potential risks.
 
 
 
 🛡️ **What You'll Find Here**
 
-My research covers a wide range of topics related to cybersecurity, privacy, and security engineering.
+My research covers a wide range of cybersecurity, privacy, and security engineering topics.
 
 
 
